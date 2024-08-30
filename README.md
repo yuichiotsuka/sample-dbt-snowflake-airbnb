@@ -4,8 +4,9 @@
 
 This is a repository as I personally learn data transformations (ELT) using dbt (data build tool).
 
-The initial commit is heavily based from a Udemy course on dbt.
-> [The Complete dbt (Data Build Tool) Bootcamp: Zero to Hero](https://www.udemy.com/course/complete-dbt-data-build-tool-bootcamp-zero-to-hero-learn-dbt/))
+The project is based from the following lessons/online courses:
+> Udemy Course: [The Complete dbt (Data Build Tool) Bootcamp: Zero to Hero](https://www.udemy.com/course/complete-dbt-data-build-tool-bootcamp-zero-to-hero-learn-dbt/))
+> Data Camp: [Introduction to dbt](https://app.datacamp.com/learn/courses/introduction-to-dbt)
 
 This repository is structured as a __dbt Project__, and I add more commits as I test out and implement new features in dbt and other Data Engineering areas.
 
@@ -32,6 +33,8 @@ These are the list of dbt features that are included in this project.
    - Using `dbt_utils.generate_surrogate_key` in [fct_reviews.sql](models/fct/fct_reviews.sql#L14)
 1. Custom Docs in Jinja [docs](https://docs.getdbt.com/reference/dbt-jinja-functions/doc)
    - [docs.md](models/docs.md)
+1. dbt Snapshots for Slowly Changing Dimensions Type 2 (SCD / SCD2) [docs](https://docs.getdbt.com/docs/build/snapshots)
+   - [scd_raw_listings.sql](snapshots/scd_raw_listings.sql)
 
 ## dbt Objects
 

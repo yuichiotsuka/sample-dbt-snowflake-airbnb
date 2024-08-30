@@ -32,3 +32,8 @@ models:
         description: '{{ doc("dim_listing_cleansed_minimum_nights") }}'
         tests:
           - positive_value
+
+      - name: updated_at
+        tests:
+          - assert_col1_gte_col2:
+              col2: created_at
