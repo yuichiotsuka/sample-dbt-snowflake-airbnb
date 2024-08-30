@@ -4,7 +4,7 @@
 
 This is a repository as I personally learn data transformations (ELT) using dbt (data build tool).
 
-The initial commit is created from a Udemy course on dbt.
+The initial commit is heavily based from a Udemy course on dbt.
 > [The Complete dbt (Data Build Tool) Bootcamp: Zero to Hero](https://www.udemy.com/course/complete-dbt-data-build-tool-bootcamp-zero-to-hero-learn-dbt/))
 
 This repository is structured as a __dbt Project__, and I add more commits as I test out and implement new features in dbt and other Data Engineering areas.
@@ -14,22 +14,22 @@ This repository is structured as a __dbt Project__, and I add more commits as I 
 These are the list of dbt features that are included in this project.
 
 1. Incremental Refresh [docs](https://docs.getdbt.com/docs/build/incremental-models)
-   - [fct_reviews.sql](models/fct/fct_reviews.sql)
+   - [fct_reviews.sql](models/fct/fct_reviews.sql#L3)
 1. Materializations [docs](https://docs.getdbt.com/docs/build/materializations)
-   - ephemeral materialization for single-use src tables [dbt_project.yml](dbt_project.yml)
-   - incremental for fact tables [fct_reviews.sql](models/fct/fct_reviews.sql)
-   - overriding defaults [dim_hosts_cleansed.sql](models/dim/dim_hosts_cleansed.sql)
+   - ephemeral materialization for single-use src tables [dbt_project.yml](dbt_project.yml#L41-42)
+   - incremental for fact tables [fct_reviews.sql](models/fct/fct_reviews.sql#L3)
+   - overriding defaults [dim_hosts_cleansed.sql](models/dim/dim_hosts_cleansed.sql#L3)
 1. Pre-Hooks [docs](https://docs.getdbt.com/reference/resource-configs/pre-hook-post-hook)
-   - adding GRANT to every new table created [dbt_project.yml](dbt_project.yml)
+   - adding GRANT to every new table created [dbt_project.yml](dbt_project.yml#L40)
 1. Source Freshness [docs](https://docs.getdbt.com/docs/deploy/source-freshness)
-   - [sources.yml](models/sources.yml)
+   - [sources.yml](models/sources.yml#L16-18)
 1. Seed Files [docs](https://docs.getdbt.com/docs/build/seeds)
    - [seed_full_moon_dates.csv](seeds/seed_full_moon_dates.csv)
 1. Custom Macros in Jinja [docs](https://docs.getdbt.com/docs/build/jinja-macros)
    - Custom Tests [positive_value.sql](macros/positive_value.sql)
    - Custom Queries [no_nulls_in_columns.sql](macros/no_nulls_in_columns.sql)
 1. dbt-utils Package
-   - Using `dbt_utils.generate_surrogate_key` in [fct_reviews.sql](models/fct/fct_reviews.sql)
+   - Using `dbt_utils.generate_surrogate_key` in [fct_reviews.sql](models/fct/fct_reviews.sql#L14)
 1. Custom Docs in Jinja [docs](https://docs.getdbt.com/reference/dbt-jinja-functions/doc)
    - [docs.md](models/docs.md)
 
